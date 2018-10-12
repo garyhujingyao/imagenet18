@@ -1,0 +1,25 @@
+(env) ubuntu@ip-172-31-36-252:/mnt/sld/imagenet18$ python3.6 train.py --machines=1
+2018-10-08 19:53:18.463891 0.imagenet: Using account 318581613021, region us-east-1, zone 
+('Resources already created, no-op',) {}
+('Choosing placement_group for run imagenet-1',) {}
+('Creating threads',) {}
+('Using account 318581613021, region us-east-1, zone ',) {}
+2018-10-08 19:53:19.331524 0.imagenet: Using image pytorch.imagenet.source.v7
+2018-10-08 19:53:22.485307 0.imagenet: Allocating p3.16xlarge for task 0.imagenet
+2018-10-08 19:53:23.219529 0.imagenet: Instance creation for 0.imagenet failed with (An error occurred (InstanceLimitExceeded) when calling the RunInstances operation: You have requested more instances (2) than your current instance limit of 1 allows for the specified instance type. Please visit http://aws.amazon.com/contact-us/ec2-request to request an adjustment to this limit.)
+2018-10-08 19:53:23.219595 0.imagenet: You can change availability zone using export NCLUSTER_ZONE=...
+2018-10-08 19:53:23.219623 0.imagenet: Terminating
+Traceback (most recent call last):
+  File "train.py", line 196, in <module>
+    main()
+  File "train.py", line 165, in main
+    install_script=open('setup.sh').read())
+  File "/mnt/sld/env/lib/python3.6/site-packages/ncluster/ncluster.py", line 106, in make_job
+    install_script=install_script, **kwargs)
+  File "/mnt/sld/env/lib/python3.6/site-packages/ncluster/aws_backend.py", line 870, in make_job
+    thread.join()
+  File "/usr/lib/python3.6/threading.py", line 1056, in join
+    self._wait_for_tstate_lock()
+  File "/usr/lib/python3.6/threading.py", line 1072, in _wait_for_tstate_lock
+    elif lock.acquire(block, timeout):
+KeyboardInterrupt

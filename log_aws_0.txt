@@ -1,0 +1,573 @@
+2018-10-11 14:38:43.428319 0.imagenet: Using account 318581613021, region us-east-1, zone 
+123123123
+should_create_resources return FALSE!!!
+----creating!!!!----
+Creating ncluster resources in region us-east-1
+Reusing VPC ncluster
+Reusing gateways ncluster
+Reusing security group ncluster
+Reusing keypair ncluster-turkey
+Creating EFS ncluster
+Creating efs mount target for us-east-1a ... Got An error occurred (IncorrectFileSystemLifeCycleState) when calling the CreateMountTarget operation: None, retrying in 1 sec
+Creating efs mount target for us-east-1a ... Got An error occurred (IncorrectFileSystemLifeCycleState) when calling the CreateMountTarget operation: None, retrying in 1 sec
+Creating efs mount target for us-east-1a ... Got An error occurred (IncorrectFileSystemLifeCycleState) when calling the CreateMountTarget operation: None, retrying in 1 sec
+Creating efs mount target for us-east-1a ... Got An error occurred (IncorrectFileSystemLifeCycleState) when calling the CreateMountTarget operation: None, retrying in 1 sec
+Creating efs mount target for us-east-1a ... success
+Creating efs mount target for us-east-1d ... success
+Creating efs mount target for us-east-1c ... success
+Creating efs mount target for us-east-1e ... success
+Creating efs mount target for us-east-1f ... success
+Creating efs mount target for us-east-1b ... success
+----created!!!!!----
+('Choosing placement_group for run imagenet-1',) {}
+('Creating threads',) {}
+('Using account 318581613021, region us-east-1, zone ',) {}
+123123123
+should_create_resources return FALSE!!!
+----creating!!!!----
+Creating ncluster resources in region us-east-1
+Reusing VPC ncluster
+Reusing gateways ncluster
+Reusing security group ncluster
+Reusing keypair ncluster-turkey
+Reusing EFS ncluster
+Creating efs mount target for us-east-1a ... success
+Creating efs mount target for us-east-1d ... success
+Creating efs mount target for us-east-1c ... success
+Creating efs mount target for us-east-1e ... success
+Creating efs mount target for us-east-1f ... success
+Creating efs mount target for us-east-1b ... success
+----created!!!!!----
+2018-10-11 14:39:07.438324 0.imagenet: Using image pytorch.imagenet.source.v7
+2018-10-11 14:39:10.785531 0.imagenet: Reusing ec2.Instance(id='i-09466a3b78ec20a62')
+ssh -i /Users/turkey/.ncluster/ncluster-turkey-318581613021-us-east-1.pem ubuntu@18.207.250.206
+2018-10-11 14:39:11.498225 0.imagenet: Setting up tmux
+2018-10-11 14:39:12.105724 0.imagenet: Checking for initialization status
+2018-10-11 14:39:12.105824 0.imagenet: downloading is_initialized
+2018-10-11 14:39:12.305963 0.imagenet: running install script
+2018-10-11 14:39:12.306088 0.imagenet: Mounting EFS
+2018-10-11 14:39:12.722645 0.imagenet: tmux> sudo mkdir -p /ncluster
+2018-10-11 14:39:12.722972 0.imagenet: uploading /tmp/ncluster/0.imagenet-f85ds/3529177934526 to /tmp/ncluster/0.imagenet-f85ds/1.cmd
+Waiting for file /tmp/ncluster/0.imagenet-f85ds/1.status
+2018-10-11 14:39:13.713368 0.imagenet: downloading /tmp/ncluster/0.imagenet-f85ds/1.status
+2018-10-11 14:39:13.988614 0.imagenet: tmux> sudo mount -t nfs -o nfsvers=4.1,rsize=1048576,wsize=1048576,hard,timeo=600,retrans=2 fs-6b799421.efs.us-east-1.amazonaws.com:/ /ncluster
+2018-10-11 14:39:13.989439 0.imagenet: uploading /tmp/ncluster/0.imagenet-f85ds/3529179200575 to /tmp/ncluster/0.imagenet-f85ds/2.cmd
+Waiting for file /tmp/ncluster/0.imagenet-f85ds/2.status
+2018-10-11 14:39:14.915172 0.imagenet: downloading /tmp/ncluster/0.imagenet-f85ds/2.status
+2018-10-11 14:39:15.184808 0.imagenet: Warning: command sudo mount -t nfs -o nfsvers=4.1,rsize=1048576,wsize=1048576,hard,timeo=600,retrans=2 fs-6b799421.efs.us-east-1.amazonaws.com:/ /ncluster returned status 32
+2018-10-11 14:39:15.184954 0.imagenet: tmux> df > /tmp/ncluster/0.imagenet-f85ds/3.stdout 2> /tmp/ncluster/0.imagenet-f85ds/3.stderr
+2018-10-11 14:39:15.185618 0.imagenet: uploading /tmp/ncluster/0.imagenet-f85ds/3529180396848 to /tmp/ncluster/0.imagenet-f85ds/3.cmd
+Waiting for file /tmp/ncluster/0.imagenet-f85ds/3.status
+2018-10-11 14:39:16.074962 0.imagenet: downloading /tmp/ncluster/0.imagenet-f85ds/3.status
+2018-10-11 14:39:16.344529 0.imagenet: downloading /tmp/ncluster/0.imagenet-f85ds/3.stdout
+2018-10-11 14:39:16.548133 0.imagenet: downloading /tmp/ncluster/0.imagenet-f85ds/3.stderr
+('EFS not yet mounted, sleeping 2 seconds',) {}
+2018-10-11 14:39:18.682645 0.imagenet: tmux> sudo mount -t nfs -o nfsvers=4.1,rsize=1048576,wsize=1048576,hard,timeo=600,retrans=2 fs-6b799421.efs.us-east-1.amazonaws.com:/ /ncluster
+2018-10-11 14:39:18.689692 0.imagenet: uploading /tmp/ncluster/0.imagenet-f85ds/3529183894603 to /tmp/ncluster/0.imagenet-f85ds/4.cmd
+Waiting for file /tmp/ncluster/0.imagenet-f85ds/4.status
+2018-10-11 14:39:19.610554 0.imagenet: downloading /tmp/ncluster/0.imagenet-f85ds/4.status
+2018-10-11 14:39:19.881908 0.imagenet: Warning: command sudo mount -t nfs -o nfsvers=4.1,rsize=1048576,wsize=1048576,hard,timeo=600,retrans=2 fs-6b799421.efs.us-east-1.amazonaws.com:/ /ncluster returned status 32
+2018-10-11 14:39:19.882050 0.imagenet: tmux> df > /tmp/ncluster/0.imagenet-f85ds/5.stdout 2> /tmp/ncluster/0.imagenet-f85ds/5.stderr
+2018-10-11 14:39:19.882687 0.imagenet: uploading /tmp/ncluster/0.imagenet-f85ds/3529185093943 to /tmp/ncluster/0.imagenet-f85ds/5.cmd
+Waiting for file /tmp/ncluster/0.imagenet-f85ds/5.status
+2018-10-11 14:39:20.802985 0.imagenet: downloading /tmp/ncluster/0.imagenet-f85ds/5.status
+2018-10-11 14:39:21.072273 0.imagenet: downloading /tmp/ncluster/0.imagenet-f85ds/5.stdout
+2018-10-11 14:39:21.275568 0.imagenet: downloading /tmp/ncluster/0.imagenet-f85ds/5.stderr
+('EFS not yet mounted, sleeping 2 seconds',) {}
+2018-10-11 14:39:23.409852 0.imagenet: tmux> sudo mount -t nfs -o nfsvers=4.1,rsize=1048576,wsize=1048576,hard,timeo=600,retrans=2 fs-6b799421.efs.us-east-1.amazonaws.com:/ /ncluster
+2018-10-11 14:39:23.410264 0.imagenet: uploading /tmp/ncluster/0.imagenet-f85ds/3529188621784 to /tmp/ncluster/0.imagenet-f85ds/6.cmd
+Waiting for file /tmp/ncluster/0.imagenet-f85ds/6.status
+2018-10-11 14:39:24.322108 0.imagenet: downloading /tmp/ncluster/0.imagenet-f85ds/6.status
+2018-10-11 14:39:24.592405 0.imagenet: Warning: command sudo mount -t nfs -o nfsvers=4.1,rsize=1048576,wsize=1048576,hard,timeo=600,retrans=2 fs-6b799421.efs.us-east-1.amazonaws.com:/ /ncluster returned status 32
+2018-10-11 14:39:24.592545 0.imagenet: tmux> df > /tmp/ncluster/0.imagenet-f85ds/7.stdout 2> /tmp/ncluster/0.imagenet-f85ds/7.stderr
+2018-10-11 14:39:24.593173 0.imagenet: uploading /tmp/ncluster/0.imagenet-f85ds/3529189804439 to /tmp/ncluster/0.imagenet-f85ds/7.cmd
+Waiting for file /tmp/ncluster/0.imagenet-f85ds/7.status
+2018-10-11 14:39:25.511269 0.imagenet: downloading /tmp/ncluster/0.imagenet-f85ds/7.status
+2018-10-11 14:39:25.781311 0.imagenet: downloading /tmp/ncluster/0.imagenet-f85ds/7.stdout
+2018-10-11 14:39:25.982472 0.imagenet: downloading /tmp/ncluster/0.imagenet-f85ds/7.stderr
+('EFS not yet mounted, sleeping 2 seconds',) {}
+2018-10-11 14:39:28.117862 0.imagenet: tmux> sudo mount -t nfs -o nfsvers=4.1,rsize=1048576,wsize=1048576,hard,timeo=600,retrans=2 fs-6b799421.efs.us-east-1.amazonaws.com:/ /ncluster
+2018-10-11 14:39:28.118690 0.imagenet: uploading /tmp/ncluster/0.imagenet-f85ds/3529193329819 to /tmp/ncluster/0.imagenet-f85ds/8.cmd
+Waiting for file /tmp/ncluster/0.imagenet-f85ds/8.status
+2018-10-11 14:39:29.047123 0.imagenet: downloading /tmp/ncluster/0.imagenet-f85ds/8.status
+2018-10-11 14:39:29.317398 0.imagenet: Warning: command sudo mount -t nfs -o nfsvers=4.1,rsize=1048576,wsize=1048576,hard,timeo=600,retrans=2 fs-6b799421.efs.us-east-1.amazonaws.com:/ /ncluster returned status 32
+2018-10-11 14:39:29.317541 0.imagenet: tmux> df > /tmp/ncluster/0.imagenet-f85ds/9.stdout 2> /tmp/ncluster/0.imagenet-f85ds/9.stderr
+2018-10-11 14:39:29.318176 0.imagenet: uploading /tmp/ncluster/0.imagenet-f85ds/3529194529437 to /tmp/ncluster/0.imagenet-f85ds/9.cmd
+Waiting for file /tmp/ncluster/0.imagenet-f85ds/9.status
+2018-10-11 14:39:30.239653 0.imagenet: downloading /tmp/ncluster/0.imagenet-f85ds/9.status
+2018-10-11 14:39:30.508578 0.imagenet: downloading /tmp/ncluster/0.imagenet-f85ds/9.stdout
+2018-10-11 14:39:30.711884 0.imagenet: downloading /tmp/ncluster/0.imagenet-f85ds/9.stderr
+('EFS not yet mounted, sleeping 2 seconds',) {}
+2018-10-11 14:39:32.844429 0.imagenet: tmux> sudo mount -t nfs -o nfsvers=4.1,rsize=1048576,wsize=1048576,hard,timeo=600,retrans=2 fs-6b799421.efs.us-east-1.amazonaws.com:/ /ncluster
+2018-10-11 14:39:32.845263 0.imagenet: uploading /tmp/ncluster/0.imagenet-f85ds/3529198056383 to /tmp/ncluster/0.imagenet-f85ds/10.cmd
+Waiting for file /tmp/ncluster/0.imagenet-f85ds/10.status
+2018-10-11 14:39:33.765742 0.imagenet: downloading /tmp/ncluster/0.imagenet-f85ds/10.status
+2018-10-11 14:39:34.039035 0.imagenet: Warning: command sudo mount -t nfs -o nfsvers=4.1,rsize=1048576,wsize=1048576,hard,timeo=600,retrans=2 fs-6b799421.efs.us-east-1.amazonaws.com:/ /ncluster returned status 32
+2018-10-11 14:39:34.039110 0.imagenet: tmux> df > /tmp/ncluster/0.imagenet-f85ds/11.stdout 2> /tmp/ncluster/0.imagenet-f85ds/11.stderr
+2018-10-11 14:39:34.039519 0.imagenet: uploading /tmp/ncluster/0.imagenet-f85ds/3529199250978 to /tmp/ncluster/0.imagenet-f85ds/11.cmd
+Waiting for file /tmp/ncluster/0.imagenet-f85ds/11.status
+2018-10-11 14:39:34.960112 0.imagenet: downloading /tmp/ncluster/0.imagenet-f85ds/11.status
+2018-10-11 14:39:35.229450 0.imagenet: downloading /tmp/ncluster/0.imagenet-f85ds/11.stdout
+2018-10-11 14:39:35.433332 0.imagenet: downloading /tmp/ncluster/0.imagenet-f85ds/11.stderr
+('EFS not yet mounted, sleeping 2 seconds',) {}
+2018-10-11 14:39:37.565016 0.imagenet: tmux> sudo mount -t nfs -o nfsvers=4.1,rsize=1048576,wsize=1048576,hard,timeo=600,retrans=2 fs-6b799421.efs.us-east-1.amazonaws.com:/ /ncluster
+2018-10-11 14:39:37.565847 0.imagenet: uploading /tmp/ncluster/0.imagenet-f85ds/3529202776974 to /tmp/ncluster/0.imagenet-f85ds/12.cmd
+Waiting for file /tmp/ncluster/0.imagenet-f85ds/12.status
+2018-10-11 14:39:38.494714 0.imagenet: downloading /tmp/ncluster/0.imagenet-f85ds/12.status
+2018-10-11 14:39:38.764770 0.imagenet: Warning: command sudo mount -t nfs -o nfsvers=4.1,rsize=1048576,wsize=1048576,hard,timeo=600,retrans=2 fs-6b799421.efs.us-east-1.amazonaws.com:/ /ncluster returned status 32
+2018-10-11 14:39:38.764914 0.imagenet: tmux> df > /tmp/ncluster/0.imagenet-f85ds/13.stdout 2> /tmp/ncluster/0.imagenet-f85ds/13.stderr
+2018-10-11 14:39:38.765547 0.imagenet: uploading /tmp/ncluster/0.imagenet-f85ds/3529203976808 to /tmp/ncluster/0.imagenet-f85ds/13.cmd
+Waiting for file /tmp/ncluster/0.imagenet-f85ds/13.status
+2018-10-11 14:39:39.691216 0.imagenet: downloading /tmp/ncluster/0.imagenet-f85ds/13.status
+2018-10-11 14:39:39.961162 0.imagenet: downloading /tmp/ncluster/0.imagenet-f85ds/13.stdout
+2018-10-11 14:39:40.165433 0.imagenet: downloading /tmp/ncluster/0.imagenet-f85ds/13.stderr
+('EFS not yet mounted, sleeping 2 seconds',) {}
+2018-10-11 14:39:42.300992 0.imagenet: tmux> sudo mount -t nfs -o nfsvers=4.1,rsize=1048576,wsize=1048576,hard,timeo=600,retrans=2 fs-6b799421.efs.us-east-1.amazonaws.com:/ /ncluster
+2018-10-11 14:39:42.301779 0.imagenet: uploading /tmp/ncluster/0.imagenet-f85ds/3529207512948 to /tmp/ncluster/0.imagenet-f85ds/14.cmd
+Waiting for file /tmp/ncluster/0.imagenet-f85ds/14.status
+2018-10-11 14:39:43.226109 0.imagenet: downloading /tmp/ncluster/0.imagenet-f85ds/14.status
+2018-10-11 14:39:43.497265 0.imagenet: Warning: command sudo mount -t nfs -o nfsvers=4.1,rsize=1048576,wsize=1048576,hard,timeo=600,retrans=2 fs-6b799421.efs.us-east-1.amazonaws.com:/ /ncluster returned status 32
+2018-10-11 14:39:43.497406 0.imagenet: tmux> df > /tmp/ncluster/0.imagenet-f85ds/15.stdout 2> /tmp/ncluster/0.imagenet-f85ds/15.stderr
+2018-10-11 14:39:43.498044 0.imagenet: uploading /tmp/ncluster/0.imagenet-f85ds/3529208709302 to /tmp/ncluster/0.imagenet-f85ds/15.cmd
+Waiting for file /tmp/ncluster/0.imagenet-f85ds/15.status
+2018-10-11 14:39:44.418713 0.imagenet: downloading /tmp/ncluster/0.imagenet-f85ds/15.status
+2018-10-11 14:39:44.688638 0.imagenet: downloading /tmp/ncluster/0.imagenet-f85ds/15.stdout
+2018-10-11 14:39:44.889686 0.imagenet: downloading /tmp/ncluster/0.imagenet-f85ds/15.stderr
+('EFS not yet mounted, sleeping 2 seconds',) {}
+2018-10-11 14:39:47.021375 0.imagenet: tmux> sudo mount -t nfs -o nfsvers=4.1,rsize=1048576,wsize=1048576,hard,timeo=600,retrans=2 fs-6b799421.efs.us-east-1.amazonaws.com:/ /ncluster
+2018-10-11 14:39:47.022197 0.imagenet: uploading /tmp/ncluster/0.imagenet-f85ds/3529212233333 to /tmp/ncluster/0.imagenet-f85ds/16.cmd
+Waiting for file /tmp/ncluster/0.imagenet-f85ds/16.status
+2018-10-11 14:39:47.952668 0.imagenet: downloading /tmp/ncluster/0.imagenet-f85ds/16.status
+2018-10-11 14:39:48.227783 0.imagenet: Warning: command sudo mount -t nfs -o nfsvers=4.1,rsize=1048576,wsize=1048576,hard,timeo=600,retrans=2 fs-6b799421.efs.us-east-1.amazonaws.com:/ /ncluster returned status 32
+2018-10-11 14:39:48.227926 0.imagenet: tmux> df > /tmp/ncluster/0.imagenet-f85ds/17.stdout 2> /tmp/ncluster/0.imagenet-f85ds/17.stderr
+2018-10-11 14:39:48.228559 0.imagenet: uploading /tmp/ncluster/0.imagenet-f85ds/3529213439820 to /tmp/ncluster/0.imagenet-f85ds/17.cmd
+Waiting for file /tmp/ncluster/0.imagenet-f85ds/17.status
+2018-10-11 14:39:49.146852 0.imagenet: downloading /tmp/ncluster/0.imagenet-f85ds/17.status
+2018-10-11 14:39:49.419056 0.imagenet: downloading /tmp/ncluster/0.imagenet-f85ds/17.stdout
+2018-10-11 14:39:49.624001 0.imagenet: downloading /tmp/ncluster/0.imagenet-f85ds/17.stderr
+('EFS not yet mounted, sleeping 2 seconds',) {}
+2018-10-11 14:39:51.760177 0.imagenet: tmux> sudo mount -t nfs -o nfsvers=4.1,rsize=1048576,wsize=1048576,hard,timeo=600,retrans=2 fs-6b799421.efs.us-east-1.amazonaws.com:/ /ncluster
+2018-10-11 14:39:51.760955 0.imagenet: uploading /tmp/ncluster/0.imagenet-f85ds/3529216972135 to /tmp/ncluster/0.imagenet-f85ds/18.cmd
+Waiting for file /tmp/ncluster/0.imagenet-f85ds/18.status
+2018-10-11 14:39:52.694733 0.imagenet: downloading /tmp/ncluster/0.imagenet-f85ds/18.status
+2018-10-11 14:39:52.965513 0.imagenet: Warning: command sudo mount -t nfs -o nfsvers=4.1,rsize=1048576,wsize=1048576,hard,timeo=600,retrans=2 fs-6b799421.efs.us-east-1.amazonaws.com:/ /ncluster returned status 32
+2018-10-11 14:39:52.965656 0.imagenet: tmux> df > /tmp/ncluster/0.imagenet-f85ds/19.stdout 2> /tmp/ncluster/0.imagenet-f85ds/19.stderr
+2018-10-11 14:39:52.966276 0.imagenet: uploading /tmp/ncluster/0.imagenet-f85ds/3529218177549 to /tmp/ncluster/0.imagenet-f85ds/19.cmd
+Waiting for file /tmp/ncluster/0.imagenet-f85ds/19.status
+2018-10-11 14:39:53.890717 0.imagenet: downloading /tmp/ncluster/0.imagenet-f85ds/19.status
+2018-10-11 14:39:54.158490 0.imagenet: downloading /tmp/ncluster/0.imagenet-f85ds/19.stdout
+2018-10-11 14:39:54.358874 0.imagenet: downloading /tmp/ncluster/0.imagenet-f85ds/19.stderr
+('EFS not yet mounted, sleeping 2 seconds',) {}
+2018-10-11 14:39:56.494320 0.imagenet: tmux> sudo mount -t nfs -o nfsvers=4.1,rsize=1048576,wsize=1048576,hard,timeo=600,retrans=2 fs-6b799421.efs.us-east-1.amazonaws.com:/ /ncluster
+2018-10-11 14:39:56.495322 0.imagenet: uploading /tmp/ncluster/0.imagenet-f85ds/3529221706274 to /tmp/ncluster/0.imagenet-f85ds/20.cmd
+Waiting for file /tmp/ncluster/0.imagenet-f85ds/20.status
+2018-10-11 14:39:57.390514 0.imagenet: downloading /tmp/ncluster/0.imagenet-f85ds/20.status
+2018-10-11 14:39:57.733498 0.imagenet: Warning: command sudo mount -t nfs -o nfsvers=4.1,rsize=1048576,wsize=1048576,hard,timeo=600,retrans=2 fs-6b799421.efs.us-east-1.amazonaws.com:/ /ncluster returned status 32
+2018-10-11 14:39:57.733639 0.imagenet: tmux> df > /tmp/ncluster/0.imagenet-f85ds/21.stdout 2> /tmp/ncluster/0.imagenet-f85ds/21.stderr
+2018-10-11 14:39:57.734311 0.imagenet: uploading /tmp/ncluster/0.imagenet-f85ds/3529222945533 to /tmp/ncluster/0.imagenet-f85ds/21.cmd
+Waiting for file /tmp/ncluster/0.imagenet-f85ds/21.status
+2018-10-11 14:39:58.654527 0.imagenet: downloading /tmp/ncluster/0.imagenet-f85ds/21.status
+2018-10-11 14:39:58.924693 0.imagenet: downloading /tmp/ncluster/0.imagenet-f85ds/21.stdout
+2018-10-11 14:39:59.125879 0.imagenet: downloading /tmp/ncluster/0.imagenet-f85ds/21.stderr
+('EFS not yet mounted, sleeping 2 seconds',) {}
+2018-10-11 14:40:01.261402 0.imagenet: tmux> sudo mount -t nfs -o nfsvers=4.1,rsize=1048576,wsize=1048576,hard,timeo=600,retrans=2 fs-6b799421.efs.us-east-1.amazonaws.com:/ /ncluster
+2018-10-11 14:40:01.262210 0.imagenet: uploading /tmp/ncluster/0.imagenet-f85ds/3529226473356 to /tmp/ncluster/0.imagenet-f85ds/22.cmd
+Waiting for file /tmp/ncluster/0.imagenet-f85ds/22.status
+2018-10-11 14:40:02.190815 0.imagenet: downloading /tmp/ncluster/0.imagenet-f85ds/22.status
+2018-10-11 14:40:02.461434 0.imagenet: Warning: command sudo mount -t nfs -o nfsvers=4.1,rsize=1048576,wsize=1048576,hard,timeo=600,retrans=2 fs-6b799421.efs.us-east-1.amazonaws.com:/ /ncluster returned status 32
+2018-10-11 14:40:02.461575 0.imagenet: tmux> df > /tmp/ncluster/0.imagenet-f85ds/23.stdout 2> /tmp/ncluster/0.imagenet-f85ds/23.stderr
+2018-10-11 14:40:02.462229 0.imagenet: uploading /tmp/ncluster/0.imagenet-f85ds/3529227673469 to /tmp/ncluster/0.imagenet-f85ds/23.cmd
+Waiting for file /tmp/ncluster/0.imagenet-f85ds/23.status
+2018-10-11 14:40:03.382577 0.imagenet: downloading /tmp/ncluster/0.imagenet-f85ds/23.status
+2018-10-11 14:40:03.653403 0.imagenet: downloading /tmp/ncluster/0.imagenet-f85ds/23.stdout
+2018-10-11 14:40:03.857402 0.imagenet: downloading /tmp/ncluster/0.imagenet-f85ds/23.stderr
+('EFS not yet mounted, sleeping 2 seconds',) {}
+2018-10-11 14:40:05.987793 0.imagenet: tmux> sudo mount -t nfs -o nfsvers=4.1,rsize=1048576,wsize=1048576,hard,timeo=600,retrans=2 fs-6b799421.efs.us-east-1.amazonaws.com:/ /ncluster
+2018-10-11 14:40:05.988599 0.imagenet: uploading /tmp/ncluster/0.imagenet-f85ds/3529231199751 to /tmp/ncluster/0.imagenet-f85ds/24.cmd
+Waiting for file /tmp/ncluster/0.imagenet-f85ds/24.status
+2018-10-11 14:40:06.914932 0.imagenet: downloading /tmp/ncluster/0.imagenet-f85ds/24.status
+2018-10-11 14:40:07.184472 0.imagenet: Warning: command sudo mount -t nfs -o nfsvers=4.1,rsize=1048576,wsize=1048576,hard,timeo=600,retrans=2 fs-6b799421.efs.us-east-1.amazonaws.com:/ /ncluster returned status 32
+2018-10-11 14:40:07.184615 0.imagenet: tmux> df > /tmp/ncluster/0.imagenet-f85ds/25.stdout 2> /tmp/ncluster/0.imagenet-f85ds/25.stderr
+2018-10-11 14:40:07.185257 0.imagenet: uploading /tmp/ncluster/0.imagenet-f85ds/3529232396510 to /tmp/ncluster/0.imagenet-f85ds/25.cmd
+Waiting for file /tmp/ncluster/0.imagenet-f85ds/25.status
+2018-10-11 14:40:08.102907 0.imagenet: downloading /tmp/ncluster/0.imagenet-f85ds/25.status
+2018-10-11 14:40:08.372780 0.imagenet: downloading /tmp/ncluster/0.imagenet-f85ds/25.stdout
+2018-10-11 14:40:08.574163 0.imagenet: downloading /tmp/ncluster/0.imagenet-f85ds/25.stderr
+('EFS not yet mounted, sleeping 2 seconds',) {}
+2018-10-11 14:40:10.709280 0.imagenet: tmux> sudo mount -t nfs -o nfsvers=4.1,rsize=1048576,wsize=1048576,hard,timeo=600,retrans=2 fs-6b799421.efs.us-east-1.amazonaws.com:/ /ncluster
+2018-10-11 14:40:10.710299 0.imagenet: uploading /tmp/ncluster/0.imagenet-f85ds/3529235921255 to /tmp/ncluster/0.imagenet-f85ds/26.cmd
+Waiting for file /tmp/ncluster/0.imagenet-f85ds/26.status
+2018-10-11 14:40:11.634798 0.imagenet: downloading /tmp/ncluster/0.imagenet-f85ds/26.status
+2018-10-11 14:40:11.904926 0.imagenet: Warning: command sudo mount -t nfs -o nfsvers=4.1,rsize=1048576,wsize=1048576,hard,timeo=600,retrans=2 fs-6b799421.efs.us-east-1.amazonaws.com:/ /ncluster returned status 32
+2018-10-11 14:40:11.905067 0.imagenet: tmux> df > /tmp/ncluster/0.imagenet-f85ds/27.stdout 2> /tmp/ncluster/0.imagenet-f85ds/27.stderr
+2018-10-11 14:40:11.905740 0.imagenet: uploading /tmp/ncluster/0.imagenet-f85ds/3529237116962 to /tmp/ncluster/0.imagenet-f85ds/27.cmd
+Waiting for file /tmp/ncluster/0.imagenet-f85ds/27.status
+2018-10-11 14:40:12.836290 0.imagenet: downloading /tmp/ncluster/0.imagenet-f85ds/27.status
+2018-10-11 14:40:13.103747 0.imagenet: downloading /tmp/ncluster/0.imagenet-f85ds/27.stdout
+2018-10-11 14:40:13.306151 0.imagenet: downloading /tmp/ncluster/0.imagenet-f85ds/27.stderr
+('EFS not yet mounted, sleeping 2 seconds',) {}
+2018-10-11 14:40:15.437660 0.imagenet: tmux> sudo mount -t nfs -o nfsvers=4.1,rsize=1048576,wsize=1048576,hard,timeo=600,retrans=2 fs-6b799421.efs.us-east-1.amazonaws.com:/ /ncluster
+2018-10-11 14:40:15.438465 0.imagenet: uploading /tmp/ncluster/0.imagenet-f85ds/3529240649619 to /tmp/ncluster/0.imagenet-f85ds/28.cmd
+Waiting for file /tmp/ncluster/0.imagenet-f85ds/28.status
+2018-10-11 14:40:16.362746 0.imagenet: downloading /tmp/ncluster/0.imagenet-f85ds/28.status
+2018-10-11 14:40:16.657848 0.imagenet: Warning: command sudo mount -t nfs -o nfsvers=4.1,rsize=1048576,wsize=1048576,hard,timeo=600,retrans=2 fs-6b799421.efs.us-east-1.amazonaws.com:/ /ncluster returned status 32
+2018-10-11 14:40:16.657993 0.imagenet: tmux> df > /tmp/ncluster/0.imagenet-f85ds/29.stdout 2> /tmp/ncluster/0.imagenet-f85ds/29.stderr
+2018-10-11 14:40:16.658605 0.imagenet: uploading /tmp/ncluster/0.imagenet-f85ds/3529241869886 to /tmp/ncluster/0.imagenet-f85ds/29.cmd
+Waiting for file /tmp/ncluster/0.imagenet-f85ds/29.status
+2018-10-11 14:40:17.582366 0.imagenet: downloading /tmp/ncluster/0.imagenet-f85ds/29.status
+2018-10-11 14:40:17.854001 0.imagenet: downloading /tmp/ncluster/0.imagenet-f85ds/29.stdout
+2018-10-11 14:40:18.083433 0.imagenet: downloading /tmp/ncluster/0.imagenet-f85ds/29.stderr
+('EFS not yet mounted, sleeping 2 seconds',) {}
+2018-10-11 14:40:20.217149 0.imagenet: tmux> sudo mount -t nfs -o nfsvers=4.1,rsize=1048576,wsize=1048576,hard,timeo=600,retrans=2 fs-6b799421.efs.us-east-1.amazonaws.com:/ /ncluster
+2018-10-11 14:40:20.227874 0.imagenet: uploading /tmp/ncluster/0.imagenet-f85ds/3529245429104 to /tmp/ncluster/0.imagenet-f85ds/30.cmd
+Waiting for file /tmp/ncluster/0.imagenet-f85ds/30.status
+2018-10-11 14:40:21.147433 0.imagenet: downloading /tmp/ncluster/0.imagenet-f85ds/30.status
+2018-10-11 14:40:21.417001 0.imagenet: Warning: command sudo mount -t nfs -o nfsvers=4.1,rsize=1048576,wsize=1048576,hard,timeo=600,retrans=2 fs-6b799421.efs.us-east-1.amazonaws.com:/ /ncluster returned status 32
+2018-10-11 14:40:21.417144 0.imagenet: tmux> df > /tmp/ncluster/0.imagenet-f85ds/31.stdout 2> /tmp/ncluster/0.imagenet-f85ds/31.stderr
+2018-10-11 14:40:21.417796 0.imagenet: uploading /tmp/ncluster/0.imagenet-f85ds/3529246629036 to /tmp/ncluster/0.imagenet-f85ds/31.cmd
+Waiting for file /tmp/ncluster/0.imagenet-f85ds/31.status
+2018-10-11 14:40:22.338635 0.imagenet: downloading /tmp/ncluster/0.imagenet-f85ds/31.status
+2018-10-11 14:40:22.608511 0.imagenet: downloading /tmp/ncluster/0.imagenet-f85ds/31.stdout
+2018-10-11 14:40:22.809125 0.imagenet: downloading /tmp/ncluster/0.imagenet-f85ds/31.stderr
+('EFS not yet mounted, sleeping 2 seconds',) {}
+2018-10-11 14:40:24.944751 0.imagenet: tmux> sudo mount -t nfs -o nfsvers=4.1,rsize=1048576,wsize=1048576,hard,timeo=600,retrans=2 fs-6b799421.efs.us-east-1.amazonaws.com:/ /ncluster
+2018-10-11 14:40:24.945559 0.imagenet: uploading /tmp/ncluster/0.imagenet-f85ds/3529250156708 to /tmp/ncluster/0.imagenet-f85ds/32.cmd
+Waiting for file /tmp/ncluster/0.imagenet-f85ds/32.status
+2018-10-11 14:40:25.845580 0.imagenet: downloading /tmp/ncluster/0.imagenet-f85ds/32.status
+2018-10-11 14:40:26.117294 0.imagenet: Warning: command sudo mount -t nfs -o nfsvers=4.1,rsize=1048576,wsize=1048576,hard,timeo=600,retrans=2 fs-6b799421.efs.us-east-1.amazonaws.com:/ /ncluster returned status 32
+2018-10-11 14:40:26.117436 0.imagenet: tmux> df > /tmp/ncluster/0.imagenet-f85ds/33.stdout 2> /tmp/ncluster/0.imagenet-f85ds/33.stderr
+2018-10-11 14:40:26.118230 0.imagenet: uploading /tmp/ncluster/0.imagenet-f85ds/3529251329334 to /tmp/ncluster/0.imagenet-f85ds/33.cmd
+Waiting for file /tmp/ncluster/0.imagenet-f85ds/33.status
+2018-10-11 14:40:27.041673 0.imagenet: downloading /tmp/ncluster/0.imagenet-f85ds/33.status
+2018-10-11 14:40:27.403095 0.imagenet: downloading /tmp/ncluster/0.imagenet-f85ds/33.stdout
+2018-10-11 14:40:27.604616 0.imagenet: downloading /tmp/ncluster/0.imagenet-f85ds/33.stderr
+('EFS not yet mounted, sleeping 2 seconds',) {}
+2018-10-11 14:40:29.737465 0.imagenet: tmux> sudo mount -t nfs -o nfsvers=4.1,rsize=1048576,wsize=1048576,hard,timeo=600,retrans=2 fs-6b799421.efs.us-east-1.amazonaws.com:/ /ncluster
+2018-10-11 14:40:29.738257 0.imagenet: uploading /tmp/ncluster/0.imagenet-f85ds/3529254949420 to /tmp/ncluster/0.imagenet-f85ds/34.cmd
+Waiting for file /tmp/ncluster/0.imagenet-f85ds/34.status
+2018-10-11 14:40:30.658983 0.imagenet: downloading /tmp/ncluster/0.imagenet-f85ds/34.status
+2018-10-11 14:40:30.928946 0.imagenet: Warning: command sudo mount -t nfs -o nfsvers=4.1,rsize=1048576,wsize=1048576,hard,timeo=600,retrans=2 fs-6b799421.efs.us-east-1.amazonaws.com:/ /ncluster returned status 32
+2018-10-11 14:40:30.929090 0.imagenet: tmux> df > /tmp/ncluster/0.imagenet-f85ds/35.stdout 2> /tmp/ncluster/0.imagenet-f85ds/35.stderr
+2018-10-11 14:40:30.929713 0.imagenet: uploading /tmp/ncluster/0.imagenet-f85ds/3529256140983 to /tmp/ncluster/0.imagenet-f85ds/35.cmd
+Waiting for file /tmp/ncluster/0.imagenet-f85ds/35.status
+2018-10-11 14:40:31.850468 0.imagenet: downloading /tmp/ncluster/0.imagenet-f85ds/35.status
+2018-10-11 14:40:32.120290 0.imagenet: downloading /tmp/ncluster/0.imagenet-f85ds/35.stdout
+2018-10-11 14:40:32.321321 0.imagenet: downloading /tmp/ncluster/0.imagenet-f85ds/35.stderr
+('EFS not yet mounted, sleeping 2 seconds',) {}
+2018-10-11 14:40:34.454519 0.imagenet: tmux> sudo mount -t nfs -o nfsvers=4.1,rsize=1048576,wsize=1048576,hard,timeo=600,retrans=2 fs-6b799421.efs.us-east-1.amazonaws.com:/ /ncluster
+2018-10-11 14:40:34.455523 0.imagenet: uploading /tmp/ncluster/0.imagenet-f85ds/3529259666473 to /tmp/ncluster/0.imagenet-f85ds/36.cmd
+Waiting for file /tmp/ncluster/0.imagenet-f85ds/36.status
+2018-10-11 14:40:35.382459 0.imagenet: downloading /tmp/ncluster/0.imagenet-f85ds/36.status
+2018-10-11 14:40:35.652302 0.imagenet: Warning: command sudo mount -t nfs -o nfsvers=4.1,rsize=1048576,wsize=1048576,hard,timeo=600,retrans=2 fs-6b799421.efs.us-east-1.amazonaws.com:/ /ncluster returned status 32
+2018-10-11 14:40:35.652442 0.imagenet: tmux> df > /tmp/ncluster/0.imagenet-f85ds/37.stdout 2> /tmp/ncluster/0.imagenet-f85ds/37.stderr
+2018-10-11 14:40:35.653071 0.imagenet: uploading /tmp/ncluster/0.imagenet-f85ds/3529260864338 to /tmp/ncluster/0.imagenet-f85ds/37.cmd
+Waiting for file /tmp/ncluster/0.imagenet-f85ds/37.status
+2018-10-11 14:40:36.574434 0.imagenet: downloading /tmp/ncluster/0.imagenet-f85ds/37.status
+2018-10-11 14:40:36.844816 0.imagenet: downloading /tmp/ncluster/0.imagenet-f85ds/37.stdout
+2018-10-11 14:40:37.047616 0.imagenet: downloading /tmp/ncluster/0.imagenet-f85ds/37.stderr
+('EFS not yet mounted, sleeping 2 seconds',) {}
+2018-10-11 14:40:39.182924 0.imagenet: tmux> sudo mount -t nfs -o nfsvers=4.1,rsize=1048576,wsize=1048576,hard,timeo=600,retrans=2 fs-6b799421.efs.us-east-1.amazonaws.com:/ /ncluster
+2018-10-11 14:40:39.183732 0.imagenet: uploading /tmp/ncluster/0.imagenet-f85ds/3529264394881 to /tmp/ncluster/0.imagenet-f85ds/38.cmd
+Waiting for file /tmp/ncluster/0.imagenet-f85ds/38.status
+2018-10-11 14:40:40.106333 0.imagenet: downloading /tmp/ncluster/0.imagenet-f85ds/38.status
+2018-10-11 14:40:40.377537 0.imagenet: Warning: command sudo mount -t nfs -o nfsvers=4.1,rsize=1048576,wsize=1048576,hard,timeo=600,retrans=2 fs-6b799421.efs.us-east-1.amazonaws.com:/ /ncluster returned status 32
+2018-10-11 14:40:40.377679 0.imagenet: tmux> df > /tmp/ncluster/0.imagenet-f85ds/39.stdout 2> /tmp/ncluster/0.imagenet-f85ds/39.stderr
+2018-10-11 14:40:40.378306 0.imagenet: uploading /tmp/ncluster/0.imagenet-f85ds/3529265589572 to /tmp/ncluster/0.imagenet-f85ds/39.cmd
+Waiting for file /tmp/ncluster/0.imagenet-f85ds/39.status
+2018-10-11 14:40:41.326493 0.imagenet: downloading /tmp/ncluster/0.imagenet-f85ds/39.status
+2018-10-11 14:40:41.596516 0.imagenet: downloading /tmp/ncluster/0.imagenet-f85ds/39.stdout
+2018-10-11 14:40:41.798319 0.imagenet: downloading /tmp/ncluster/0.imagenet-f85ds/39.stderr
+('EFS not yet mounted, sleeping 2 seconds',) {}
+2018-10-11 14:40:43.934062 0.imagenet: tmux> sudo mount -t nfs -o nfsvers=4.1,rsize=1048576,wsize=1048576,hard,timeo=600,retrans=2 fs-6b799421.efs.us-east-1.amazonaws.com:/ /ncluster
+2018-10-11 14:40:43.934855 0.imagenet: uploading /tmp/ncluster/0.imagenet-f85ds/3529269146019 to /tmp/ncluster/0.imagenet-f85ds/40.cmd
+Waiting for file /tmp/ncluster/0.imagenet-f85ds/40.status
+2018-10-11 14:40:44.854597 0.imagenet: downloading /tmp/ncluster/0.imagenet-f85ds/40.status
+2018-10-11 14:40:45.125061 0.imagenet: Warning: command sudo mount -t nfs -o nfsvers=4.1,rsize=1048576,wsize=1048576,hard,timeo=600,retrans=2 fs-6b799421.efs.us-east-1.amazonaws.com:/ /ncluster returned status 32
+2018-10-11 14:40:45.125204 0.imagenet: tmux> df > /tmp/ncluster/0.imagenet-f85ds/41.stdout 2> /tmp/ncluster/0.imagenet-f85ds/41.stderr
+2018-10-11 14:40:45.125833 0.imagenet: uploading /tmp/ncluster/0.imagenet-f85ds/3529270337097 to /tmp/ncluster/0.imagenet-f85ds/41.cmd
+Waiting for file /tmp/ncluster/0.imagenet-f85ds/41.status
+2018-10-11 14:40:46.050821 0.imagenet: downloading /tmp/ncluster/0.imagenet-f85ds/41.status
+2018-10-11 14:40:46.321380 0.imagenet: downloading /tmp/ncluster/0.imagenet-f85ds/41.stdout
+2018-10-11 14:40:46.522289 0.imagenet: downloading /tmp/ncluster/0.imagenet-f85ds/41.stderr
+('EFS not yet mounted, sleeping 2 seconds',) {}
+2018-10-11 14:40:48.656656 0.imagenet: tmux> sudo mount -t nfs -o nfsvers=4.1,rsize=1048576,wsize=1048576,hard,timeo=600,retrans=2 fs-6b799421.efs.us-east-1.amazonaws.com:/ /ncluster
+2018-10-11 14:40:48.657196 0.imagenet: uploading /tmp/ncluster/0.imagenet-f85ds/3529273868576 to /tmp/ncluster/0.imagenet-f85ds/42.cmd
+Waiting for file /tmp/ncluster/0.imagenet-f85ds/42.status
+2018-10-11 14:40:49.586847 0.imagenet: downloading /tmp/ncluster/0.imagenet-f85ds/42.status
+2018-10-11 14:40:49.856600 0.imagenet: Warning: command sudo mount -t nfs -o nfsvers=4.1,rsize=1048576,wsize=1048576,hard,timeo=600,retrans=2 fs-6b799421.efs.us-east-1.amazonaws.com:/ /ncluster returned status 32
+2018-10-11 14:40:49.856742 0.imagenet: tmux> df > /tmp/ncluster/0.imagenet-f85ds/43.stdout 2> /tmp/ncluster/0.imagenet-f85ds/43.stderr
+2018-10-11 14:40:49.857400 0.imagenet: uploading /tmp/ncluster/0.imagenet-f85ds/3529275068637 to /tmp/ncluster/0.imagenet-f85ds/43.cmd
+Waiting for file /tmp/ncluster/0.imagenet-f85ds/43.status
+2018-10-11 14:40:50.778388 0.imagenet: downloading /tmp/ncluster/0.imagenet-f85ds/43.status
+2018-10-11 14:40:51.048376 0.imagenet: downloading /tmp/ncluster/0.imagenet-f85ds/43.stdout
+2018-10-11 14:40:51.249498 0.imagenet: downloading /tmp/ncluster/0.imagenet-f85ds/43.stderr
+('EFS not yet mounted, sleeping 2 seconds',) {}
+2018-10-11 14:40:53.384844 0.imagenet: tmux> sudo mount -t nfs -o nfsvers=4.1,rsize=1048576,wsize=1048576,hard,timeo=600,retrans=2 fs-6b799421.efs.us-east-1.amazonaws.com:/ /ncluster
+2018-10-11 14:40:53.385650 0.imagenet: uploading /tmp/ncluster/0.imagenet-f85ds/3529278596800 to /tmp/ncluster/0.imagenet-f85ds/44.cmd
+Waiting for file /tmp/ncluster/0.imagenet-f85ds/44.status
+2018-10-11 14:40:54.390305 0.imagenet: downloading /tmp/ncluster/0.imagenet-f85ds/44.status
+2018-10-11 14:40:54.658049 0.imagenet: Warning: command sudo mount -t nfs -o nfsvers=4.1,rsize=1048576,wsize=1048576,hard,timeo=600,retrans=2 fs-6b799421.efs.us-east-1.amazonaws.com:/ /ncluster returned status 32
+2018-10-11 14:40:54.658122 0.imagenet: tmux> df > /tmp/ncluster/0.imagenet-f85ds/45.stdout 2> /tmp/ncluster/0.imagenet-f85ds/45.stderr
+2018-10-11 14:40:54.658401 0.imagenet: uploading /tmp/ncluster/0.imagenet-f85ds/3529279869978 to /tmp/ncluster/0.imagenet-f85ds/45.cmd
+Waiting for file /tmp/ncluster/0.imagenet-f85ds/45.status
+2018-10-11 14:40:55.546328 0.imagenet: downloading /tmp/ncluster/0.imagenet-f85ds/45.status
+2018-10-11 14:40:55.816476 0.imagenet: downloading /tmp/ncluster/0.imagenet-f85ds/45.stdout
+2018-10-11 14:40:56.018191 0.imagenet: downloading /tmp/ncluster/0.imagenet-f85ds/45.stderr
+('EFS not yet mounted, sleeping 2 seconds',) {}
+2018-10-11 14:40:58.164952 0.imagenet: tmux> sudo mount -t nfs -o nfsvers=4.1,rsize=1048576,wsize=1048576,hard,timeo=600,retrans=2 fs-6b799421.efs.us-east-1.amazonaws.com:/ /ncluster
+2018-10-11 14:40:58.165766 0.imagenet: uploading /tmp/ncluster/0.imagenet-f85ds/3529283376910 to /tmp/ncluster/0.imagenet-f85ds/46.cmd
+Waiting for file /tmp/ncluster/0.imagenet-f85ds/46.status
+2018-10-11 14:40:59.094405 0.imagenet: downloading /tmp/ncluster/0.imagenet-f85ds/46.status
+2018-10-11 14:40:59.364681 0.imagenet: Warning: command sudo mount -t nfs -o nfsvers=4.1,rsize=1048576,wsize=1048576,hard,timeo=600,retrans=2 fs-6b799421.efs.us-east-1.amazonaws.com:/ /ncluster returned status 32
+2018-10-11 14:40:59.364825 0.imagenet: tmux> df > /tmp/ncluster/0.imagenet-f85ds/47.stdout 2> /tmp/ncluster/0.imagenet-f85ds/47.stderr
+2018-10-11 14:40:59.365555 0.imagenet: uploading /tmp/ncluster/0.imagenet-f85ds/3529284576716 to /tmp/ncluster/0.imagenet-f85ds/47.cmd
+Waiting for file /tmp/ncluster/0.imagenet-f85ds/47.status
+2018-10-11 14:41:00.285932 0.imagenet: downloading /tmp/ncluster/0.imagenet-f85ds/47.status
+2018-10-11 14:41:00.551744 0.imagenet: downloading /tmp/ncluster/0.imagenet-f85ds/47.stdout
+2018-10-11 14:41:00.755435 0.imagenet: downloading /tmp/ncluster/0.imagenet-f85ds/47.stderr
+('EFS not yet mounted, sleeping 2 seconds',) {}
+2018-10-11 14:41:02.894361 0.imagenet: tmux> sudo mount -t nfs -o nfsvers=4.1,rsize=1048576,wsize=1048576,hard,timeo=600,retrans=2 fs-6b799421.efs.us-east-1.amazonaws.com:/ /ncluster
+2018-10-11 14:41:02.895179 0.imagenet: uploading /tmp/ncluster/0.imagenet-f85ds/3529288106317 to /tmp/ncluster/0.imagenet-f85ds/48.cmd
+Waiting for file /tmp/ncluster/0.imagenet-f85ds/48.status
+2018-10-11 14:41:03.896513 0.imagenet: downloading /tmp/ncluster/0.imagenet-f85ds/48.status
+2018-10-11 14:41:04.172116 0.imagenet: Warning: command sudo mount -t nfs -o nfsvers=4.1,rsize=1048576,wsize=1048576,hard,timeo=600,retrans=2 fs-6b799421.efs.us-east-1.amazonaws.com:/ /ncluster returned status 32
+2018-10-11 14:41:04.172256 0.imagenet: tmux> df > /tmp/ncluster/0.imagenet-f85ds/49.stdout 2> /tmp/ncluster/0.imagenet-f85ds/49.stderr
+2018-10-11 14:41:04.172890 0.imagenet: uploading /tmp/ncluster/0.imagenet-f85ds/3529289384152 to /tmp/ncluster/0.imagenet-f85ds/49.cmd
+Waiting for file /tmp/ncluster/0.imagenet-f85ds/49.status
+2018-10-11 14:41:05.098342 0.imagenet: downloading /tmp/ncluster/0.imagenet-f85ds/49.status
+2018-10-11 14:41:05.369201 0.imagenet: downloading /tmp/ncluster/0.imagenet-f85ds/49.stdout
+2018-10-11 14:41:05.572715 0.imagenet: downloading /tmp/ncluster/0.imagenet-f85ds/49.stderr
+('EFS not yet mounted, sleeping 2 seconds',) {}
+2018-10-11 14:41:07.703664 0.imagenet: tmux> sudo mount -t nfs -o nfsvers=4.1,rsize=1048576,wsize=1048576,hard,timeo=600,retrans=2 fs-6b799421.efs.us-east-1.amazonaws.com:/ /ncluster
+2018-10-11 14:41:07.704665 0.imagenet: uploading /tmp/ncluster/0.imagenet-f85ds/3529292915621 to /tmp/ncluster/0.imagenet-f85ds/50.cmd
+Waiting for file /tmp/ncluster/0.imagenet-f85ds/50.status
+2018-10-11 14:41:08.649446 0.imagenet: downloading /tmp/ncluster/0.imagenet-f85ds/50.status
+2018-10-11 14:41:08.920825 0.imagenet: Warning: command sudo mount -t nfs -o nfsvers=4.1,rsize=1048576,wsize=1048576,hard,timeo=600,retrans=2 fs-6b799421.efs.us-east-1.amazonaws.com:/ /ncluster returned status 32
+2018-10-11 14:41:08.920970 0.imagenet: tmux> df > /tmp/ncluster/0.imagenet-f85ds/51.stdout 2> /tmp/ncluster/0.imagenet-f85ds/51.stderr
+2018-10-11 14:41:08.921622 0.imagenet: uploading /tmp/ncluster/0.imagenet-f85ds/3529294132866 to /tmp/ncluster/0.imagenet-f85ds/51.cmd
+Waiting for file /tmp/ncluster/0.imagenet-f85ds/51.status
+2018-10-11 14:41:09.842247 0.imagenet: downloading /tmp/ncluster/0.imagenet-f85ds/51.status
+2018-10-11 14:41:10.112457 0.imagenet: downloading /tmp/ncluster/0.imagenet-f85ds/51.stdout
+2018-10-11 14:41:10.320425 0.imagenet: downloading /tmp/ncluster/0.imagenet-f85ds/51.stderr
+('EFS not yet mounted, sleeping 2 seconds',) {}
+2018-10-11 14:41:12.460656 0.imagenet: tmux> sudo mount -t nfs -o nfsvers=4.1,rsize=1048576,wsize=1048576,hard,timeo=600,retrans=2 fs-6b799421.efs.us-east-1.amazonaws.com:/ /ncluster
+2018-10-11 14:41:12.461483 0.imagenet: uploading /tmp/ncluster/0.imagenet-f85ds/3529297672612 to /tmp/ncluster/0.imagenet-f85ds/52.cmd
+Waiting for file /tmp/ncluster/0.imagenet-f85ds/52.status
+2018-10-11 14:41:13.431195 0.imagenet: downloading /tmp/ncluster/0.imagenet-f85ds/52.status
+2018-10-11 14:41:13.703191 0.imagenet: Warning: command sudo mount -t nfs -o nfsvers=4.1,rsize=1048576,wsize=1048576,hard,timeo=600,retrans=2 fs-6b799421.efs.us-east-1.amazonaws.com:/ /ncluster returned status 32
+2018-10-11 14:41:13.703355 0.imagenet: tmux> df > /tmp/ncluster/0.imagenet-f85ds/53.stdout 2> /tmp/ncluster/0.imagenet-f85ds/53.stderr
+2018-10-11 14:41:13.704037 0.imagenet: uploading /tmp/ncluster/0.imagenet-f85ds/3529298915253 to /tmp/ncluster/0.imagenet-f85ds/53.cmd
+Waiting for file /tmp/ncluster/0.imagenet-f85ds/53.status
+2018-10-11 14:41:14.630287 0.imagenet: downloading /tmp/ncluster/0.imagenet-f85ds/53.status
+2018-10-11 14:41:14.900815 0.imagenet: downloading /tmp/ncluster/0.imagenet-f85ds/53.stdout
+2018-10-11 14:41:15.097914 0.imagenet: downloading /tmp/ncluster/0.imagenet-f85ds/53.stderr
+('EFS not yet mounted, sleeping 2 seconds',) {}
+2018-10-11 14:41:17.230437 0.imagenet: tmux> sudo mount -t nfs -o nfsvers=4.1,rsize=1048576,wsize=1048576,hard,timeo=600,retrans=2 fs-6b799421.efs.us-east-1.amazonaws.com:/ /ncluster
+2018-10-11 14:41:17.231238 0.imagenet: uploading /tmp/ncluster/0.imagenet-f85ds/3529302442395 to /tmp/ncluster/0.imagenet-f85ds/54.cmd
+Waiting for file /tmp/ncluster/0.imagenet-f85ds/54.status
+2018-10-11 14:41:18.158380 0.imagenet: downloading /tmp/ncluster/0.imagenet-f85ds/54.status
+2018-10-11 14:41:18.432384 0.imagenet: Warning: command sudo mount -t nfs -o nfsvers=4.1,rsize=1048576,wsize=1048576,hard,timeo=600,retrans=2 fs-6b799421.efs.us-east-1.amazonaws.com:/ /ncluster returned status 32
+2018-10-11 14:41:18.432546 0.imagenet: tmux> df > /tmp/ncluster/0.imagenet-f85ds/55.stdout 2> /tmp/ncluster/0.imagenet-f85ds/55.stderr
+2018-10-11 14:41:18.433167 0.imagenet: uploading /tmp/ncluster/0.imagenet-f85ds/3529303644440 to /tmp/ncluster/0.imagenet-f85ds/55.cmd
+Waiting for file /tmp/ncluster/0.imagenet-f85ds/55.status
+2018-10-11 14:41:19.415478 0.imagenet: downloading /tmp/ncluster/0.imagenet-f85ds/55.status
+2018-10-11 14:41:19.683846 0.imagenet: downloading /tmp/ncluster/0.imagenet-f85ds/55.stdout
+2018-10-11 14:41:19.886555 0.imagenet: downloading /tmp/ncluster/0.imagenet-f85ds/55.stderr
+('EFS not yet mounted, sleeping 2 seconds',) {}
+2018-10-11 14:41:22.017858 0.imagenet: tmux> sudo mount -t nfs -o nfsvers=4.1,rsize=1048576,wsize=1048576,hard,timeo=600,retrans=2 fs-6b799421.efs.us-east-1.amazonaws.com:/ /ncluster
+2018-10-11 14:41:22.018860 0.imagenet: uploading /tmp/ncluster/0.imagenet-f85ds/3529307229814 to /tmp/ncluster/0.imagenet-f85ds/56.cmd
+Waiting for file /tmp/ncluster/0.imagenet-f85ds/56.status
+2018-10-11 14:41:22.946760 0.imagenet: downloading /tmp/ncluster/0.imagenet-f85ds/56.status
+2018-10-11 14:41:23.218292 0.imagenet: Warning: command sudo mount -t nfs -o nfsvers=4.1,rsize=1048576,wsize=1048576,hard,timeo=600,retrans=2 fs-6b799421.efs.us-east-1.amazonaws.com:/ /ncluster returned status 32
+2018-10-11 14:41:23.218436 0.imagenet: tmux> df > /tmp/ncluster/0.imagenet-f85ds/57.stdout 2> /tmp/ncluster/0.imagenet-f85ds/57.stderr
+2018-10-11 14:41:23.219084 0.imagenet: uploading /tmp/ncluster/0.imagenet-f85ds/3529308430330 to /tmp/ncluster/0.imagenet-f85ds/57.cmd
+Waiting for file /tmp/ncluster/0.imagenet-f85ds/57.status
+2018-10-11 14:41:24.139986 0.imagenet: downloading /tmp/ncluster/0.imagenet-f85ds/57.status
+2018-10-11 14:41:24.409784 0.imagenet: downloading /tmp/ncluster/0.imagenet-f85ds/57.stdout
+2018-10-11 14:41:24.614597 0.imagenet: downloading /tmp/ncluster/0.imagenet-f85ds/57.stderr
+('EFS not yet mounted, sleeping 2 seconds',) {}
+2018-10-11 14:41:26.753365 0.imagenet: tmux> sudo mount -t nfs -o nfsvers=4.1,rsize=1048576,wsize=1048576,hard,timeo=600,retrans=2 fs-6b799421.efs.us-east-1.amazonaws.com:/ /ncluster
+2018-10-11 14:41:26.754234 0.imagenet: uploading /tmp/ncluster/0.imagenet-f85ds/3529311965322 to /tmp/ncluster/0.imagenet-f85ds/58.cmd
+Waiting for file /tmp/ncluster/0.imagenet-f85ds/58.status
+2018-10-11 14:41:27.686349 0.imagenet: downloading /tmp/ncluster/0.imagenet-f85ds/58.status
+2018-10-11 14:41:27.960688 0.imagenet: Warning: command sudo mount -t nfs -o nfsvers=4.1,rsize=1048576,wsize=1048576,hard,timeo=600,retrans=2 fs-6b799421.efs.us-east-1.amazonaws.com:/ /ncluster returned status 32
+2018-10-11 14:41:27.960834 0.imagenet: tmux> df > /tmp/ncluster/0.imagenet-f85ds/59.stdout 2> /tmp/ncluster/0.imagenet-f85ds/59.stderr
+2018-10-11 14:41:27.961461 0.imagenet: uploading /tmp/ncluster/0.imagenet-f85ds/3529313172726 to /tmp/ncluster/0.imagenet-f85ds/59.cmd
+Waiting for file /tmp/ncluster/0.imagenet-f85ds/59.status
+2018-10-11 14:41:28.886168 0.imagenet: downloading /tmp/ncluster/0.imagenet-f85ds/59.status
+2018-10-11 14:41:29.157310 0.imagenet: downloading /tmp/ncluster/0.imagenet-f85ds/59.stdout
+2018-10-11 14:41:29.362196 0.imagenet: downloading /tmp/ncluster/0.imagenet-f85ds/59.stderr
+('EFS not yet mounted, sleeping 2 seconds',) {}
+2018-10-11 14:41:31.493196 0.imagenet: tmux> sudo mount -t nfs -o nfsvers=4.1,rsize=1048576,wsize=1048576,hard,timeo=600,retrans=2 fs-6b799421.efs.us-east-1.amazonaws.com:/ /ncluster
+2018-10-11 14:41:31.493989 0.imagenet: uploading /tmp/ncluster/0.imagenet-f85ds/3529316705168 to /tmp/ncluster/0.imagenet-f85ds/60.cmd
+Waiting for file /tmp/ncluster/0.imagenet-f85ds/60.status
+2018-10-11 14:41:32.418477 0.imagenet: downloading /tmp/ncluster/0.imagenet-f85ds/60.status
+2018-10-11 14:41:32.688418 0.imagenet: Warning: command sudo mount -t nfs -o nfsvers=4.1,rsize=1048576,wsize=1048576,hard,timeo=600,retrans=2 fs-6b799421.efs.us-east-1.amazonaws.com:/ /ncluster returned status 32
+2018-10-11 14:41:32.688561 0.imagenet: tmux> df > /tmp/ncluster/0.imagenet-f85ds/61.stdout 2> /tmp/ncluster/0.imagenet-f85ds/61.stderr
+2018-10-11 14:41:32.689188 0.imagenet: uploading /tmp/ncluster/0.imagenet-f85ds/3529317900456 to /tmp/ncluster/0.imagenet-f85ds/61.cmd
+Waiting for file /tmp/ncluster/0.imagenet-f85ds/61.status
+2018-10-11 14:41:33.652623 0.imagenet: downloading /tmp/ncluster/0.imagenet-f85ds/61.status
+2018-10-11 14:41:33.925076 0.imagenet: downloading /tmp/ncluster/0.imagenet-f85ds/61.stdout
+2018-10-11 14:41:34.127263 0.imagenet: downloading /tmp/ncluster/0.imagenet-f85ds/61.stderr
+('EFS not yet mounted, sleeping 2 seconds',) {}
+2018-10-11 14:41:36.263349 0.imagenet: tmux> sudo mount -t nfs -o nfsvers=4.1,rsize=1048576,wsize=1048576,hard,timeo=600,retrans=2 fs-6b799421.efs.us-east-1.amazonaws.com:/ /ncluster
+2018-10-11 14:41:36.264158 0.imagenet: uploading /tmp/ncluster/0.imagenet-f85ds/3529321475323 to /tmp/ncluster/0.imagenet-f85ds/62.cmd
+Waiting for file /tmp/ncluster/0.imagenet-f85ds/62.status
+2018-10-11 14:41:37.202473 0.imagenet: downloading /tmp/ncluster/0.imagenet-f85ds/62.status
+2018-10-11 14:41:37.472172 0.imagenet: Warning: command sudo mount -t nfs -o nfsvers=4.1,rsize=1048576,wsize=1048576,hard,timeo=600,retrans=2 fs-6b799421.efs.us-east-1.amazonaws.com:/ /ncluster returned status 32
+2018-10-11 14:41:37.472314 0.imagenet: tmux> df > /tmp/ncluster/0.imagenet-f85ds/63.stdout 2> /tmp/ncluster/0.imagenet-f85ds/63.stderr
+2018-10-11 14:41:37.472959 0.imagenet: uploading /tmp/ncluster/0.imagenet-f85ds/3529322684207 to /tmp/ncluster/0.imagenet-f85ds/63.cmd
+Waiting for file /tmp/ncluster/0.imagenet-f85ds/63.status
+2018-10-11 14:41:38.482784 0.imagenet: downloading /tmp/ncluster/0.imagenet-f85ds/63.status
+2018-10-11 14:41:38.760653 0.imagenet: downloading /tmp/ncluster/0.imagenet-f85ds/63.stdout
+2018-10-11 14:41:38.962297 0.imagenet: downloading /tmp/ncluster/0.imagenet-f85ds/63.stderr
+('EFS not yet mounted, sleeping 2 seconds',) {}
+2018-10-11 14:41:41.097902 0.imagenet: tmux> sudo mount -t nfs -o nfsvers=4.1,rsize=1048576,wsize=1048576,hard,timeo=600,retrans=2 fs-6b799421.efs.us-east-1.amazonaws.com:/ /ncluster
+2018-10-11 14:41:41.098680 0.imagenet: uploading /tmp/ncluster/0.imagenet-f85ds/3529326309857 to /tmp/ncluster/0.imagenet-f85ds/64.cmd
+Waiting for file /tmp/ncluster/0.imagenet-f85ds/64.status
+2018-10-11 14:41:42.022490 0.imagenet: downloading /tmp/ncluster/0.imagenet-f85ds/64.status
+2018-10-11 14:41:42.292298 0.imagenet: Warning: command sudo mount -t nfs -o nfsvers=4.1,rsize=1048576,wsize=1048576,hard,timeo=600,retrans=2 fs-6b799421.efs.us-east-1.amazonaws.com:/ /ncluster returned status 32
+2018-10-11 14:41:42.292441 0.imagenet: tmux> df > /tmp/ncluster/0.imagenet-f85ds/65.stdout 2> /tmp/ncluster/0.imagenet-f85ds/65.stderr
+2018-10-11 14:41:42.293173 0.imagenet: uploading /tmp/ncluster/0.imagenet-f85ds/3529327504333 to /tmp/ncluster/0.imagenet-f85ds/65.cmd
+Waiting for file /tmp/ncluster/0.imagenet-f85ds/65.status
+2018-10-11 14:41:43.222082 0.imagenet: downloading /tmp/ncluster/0.imagenet-f85ds/65.status
+2018-10-11 14:41:43.493369 0.imagenet: downloading /tmp/ncluster/0.imagenet-f85ds/65.stdout
+2018-10-11 14:41:43.694182 0.imagenet: downloading /tmp/ncluster/0.imagenet-f85ds/65.stderr
+('EFS not yet mounted, sleeping 2 seconds',) {}
+2018-10-11 14:41:45.832459 0.imagenet: tmux> sudo mount -t nfs -o nfsvers=4.1,rsize=1048576,wsize=1048576,hard,timeo=600,retrans=2 fs-6b799421.efs.us-east-1.amazonaws.com:/ /ncluster
+2018-10-11 14:41:45.833461 0.imagenet: uploading /tmp/ncluster/0.imagenet-f85ds/3529331044416 to /tmp/ncluster/0.imagenet-f85ds/66.cmd
+Waiting for file /tmp/ncluster/0.imagenet-f85ds/66.status
+2018-10-11 14:41:46.758135 0.imagenet: downloading /tmp/ncluster/0.imagenet-f85ds/66.status
+2018-10-11 14:41:47.028493 0.imagenet: Warning: command sudo mount -t nfs -o nfsvers=4.1,rsize=1048576,wsize=1048576,hard,timeo=600,retrans=2 fs-6b799421.efs.us-east-1.amazonaws.com:/ /ncluster returned status 32
+2018-10-11 14:41:47.028634 0.imagenet: tmux> df > /tmp/ncluster/0.imagenet-f85ds/67.stdout 2> /tmp/ncluster/0.imagenet-f85ds/67.stderr
+2018-10-11 14:41:47.029279 0.imagenet: uploading /tmp/ncluster/0.imagenet-f85ds/3529332240529 to /tmp/ncluster/0.imagenet-f85ds/67.cmd
+Waiting for file /tmp/ncluster/0.imagenet-f85ds/67.status
+2018-10-11 14:41:47.950917 0.imagenet: downloading /tmp/ncluster/0.imagenet-f85ds/67.status
+2018-10-11 14:41:48.222104 0.imagenet: downloading /tmp/ncluster/0.imagenet-f85ds/67.stdout
+2018-10-11 14:41:48.423959 0.imagenet: downloading /tmp/ncluster/0.imagenet-f85ds/67.stderr
+('EFS not yet mounted, sleeping 2 seconds',) {}
+2018-10-11 14:41:50.558958 0.imagenet: tmux> sudo mount -t nfs -o nfsvers=4.1,rsize=1048576,wsize=1048576,hard,timeo=600,retrans=2 fs-6b799421.efs.us-east-1.amazonaws.com:/ /ncluster
+2018-10-11 14:41:50.559794 0.imagenet: uploading /tmp/ncluster/0.imagenet-f85ds/3529335770912 to /tmp/ncluster/0.imagenet-f85ds/68.cmd
+Waiting for file /tmp/ncluster/0.imagenet-f85ds/68.status
+2018-10-11 14:41:51.486835 0.imagenet: downloading /tmp/ncluster/0.imagenet-f85ds/68.status
+2018-10-11 14:41:51.756662 0.imagenet: Warning: command sudo mount -t nfs -o nfsvers=4.1,rsize=1048576,wsize=1048576,hard,timeo=600,retrans=2 fs-6b799421.efs.us-east-1.amazonaws.com:/ /ncluster returned status 32
+2018-10-11 14:41:51.756805 0.imagenet: tmux> df > /tmp/ncluster/0.imagenet-f85ds/69.stdout 2> /tmp/ncluster/0.imagenet-f85ds/69.stderr
+2018-10-11 14:41:51.757469 0.imagenet: uploading /tmp/ncluster/0.imagenet-f85ds/3529336968698 to /tmp/ncluster/0.imagenet-f85ds/69.cmd
+Waiting for file /tmp/ncluster/0.imagenet-f85ds/69.status
+2018-10-11 14:41:52.677987 0.imagenet: downloading /tmp/ncluster/0.imagenet-f85ds/69.status
+2018-10-11 14:41:52.951999 0.imagenet: downloading /tmp/ncluster/0.imagenet-f85ds/69.stdout
+2018-10-11 14:41:53.156859 0.imagenet: downloading /tmp/ncluster/0.imagenet-f85ds/69.stderr
+('EFS not yet mounted, sleeping 2 seconds',) {}
+2018-10-11 14:41:55.292677 0.imagenet: tmux> sudo mount -t nfs -o nfsvers=4.1,rsize=1048576,wsize=1048576,hard,timeo=600,retrans=2 fs-6b799421.efs.us-east-1.amazonaws.com:/ /ncluster
+2018-10-11 14:41:55.293469 0.imagenet: uploading /tmp/ncluster/0.imagenet-f85ds/3529340504633 to /tmp/ncluster/0.imagenet-f85ds/70.cmd
+Waiting for file /tmp/ncluster/0.imagenet-f85ds/70.status
+2018-10-11 14:41:56.225923 0.imagenet: downloading /tmp/ncluster/0.imagenet-f85ds/70.status
+2018-10-11 14:41:56.500943 0.imagenet: Warning: command sudo mount -t nfs -o nfsvers=4.1,rsize=1048576,wsize=1048576,hard,timeo=600,retrans=2 fs-6b799421.efs.us-east-1.amazonaws.com:/ /ncluster returned status 32
+2018-10-11 14:41:56.501086 0.imagenet: tmux> df > /tmp/ncluster/0.imagenet-f85ds/71.stdout 2> /tmp/ncluster/0.imagenet-f85ds/71.stderr
+2018-10-11 14:41:56.501719 0.imagenet: uploading /tmp/ncluster/0.imagenet-f85ds/3529341712980 to /tmp/ncluster/0.imagenet-f85ds/71.cmd
+Waiting for file /tmp/ncluster/0.imagenet-f85ds/71.status
+2018-10-11 14:41:57.422518 0.imagenet: downloading /tmp/ncluster/0.imagenet-f85ds/71.status
+2018-10-11 14:41:57.694970 0.imagenet: downloading /tmp/ncluster/0.imagenet-f85ds/71.stdout
+2018-10-11 14:41:57.899550 0.imagenet: downloading /tmp/ncluster/0.imagenet-f85ds/71.stderr
+('EFS not yet mounted, sleeping 2 seconds',) {}
+2018-10-11 14:42:00.033307 0.imagenet: tmux> sudo mount -t nfs -o nfsvers=4.1,rsize=1048576,wsize=1048576,hard,timeo=600,retrans=2 fs-6b799421.efs.us-east-1.amazonaws.com:/ /ncluster
+2018-10-11 14:42:00.033709 0.imagenet: uploading /tmp/ncluster/0.imagenet-f85ds/3529345245203 to /tmp/ncluster/0.imagenet-f85ds/72.cmd
+Waiting for file /tmp/ncluster/0.imagenet-f85ds/72.status
+2018-10-11 14:42:00.950086 0.imagenet: downloading /tmp/ncluster/0.imagenet-f85ds/72.status
+2018-10-11 14:42:01.221073 0.imagenet: Warning: command sudo mount -t nfs -o nfsvers=4.1,rsize=1048576,wsize=1048576,hard,timeo=600,retrans=2 fs-6b799421.efs.us-east-1.amazonaws.com:/ /ncluster returned status 32
+2018-10-11 14:42:01.221215 0.imagenet: tmux> df > /tmp/ncluster/0.imagenet-f85ds/73.stdout 2> /tmp/ncluster/0.imagenet-f85ds/73.stderr
+2018-10-11 14:42:01.221864 0.imagenet: uploading /tmp/ncluster/0.imagenet-f85ds/3529346433110 to /tmp/ncluster/0.imagenet-f85ds/73.cmd
+Waiting for file /tmp/ncluster/0.imagenet-f85ds/73.status
+2018-10-11 14:42:02.146291 0.imagenet: downloading /tmp/ncluster/0.imagenet-f85ds/73.status
+2018-10-11 14:42:02.418334 0.imagenet: downloading /tmp/ncluster/0.imagenet-f85ds/73.stdout
+2018-10-11 14:42:02.620095 0.imagenet: downloading /tmp/ncluster/0.imagenet-f85ds/73.stderr
+('EFS not yet mounted, sleeping 2 seconds',) {}
+2018-10-11 14:42:04.752911 0.imagenet: tmux> sudo mount -t nfs -o nfsvers=4.1,rsize=1048576,wsize=1048576,hard,timeo=600,retrans=2 fs-6b799421.efs.us-east-1.amazonaws.com:/ /ncluster
+2018-10-11 14:42:04.753726 0.imagenet: uploading /tmp/ncluster/0.imagenet-f85ds/3529349964870 to /tmp/ncluster/0.imagenet-f85ds/74.cmd
+Waiting for file /tmp/ncluster/0.imagenet-f85ds/74.status
+2018-10-11 14:42:05.682407 0.imagenet: downloading /tmp/ncluster/0.imagenet-f85ds/74.status
+2018-10-11 14:42:05.952869 0.imagenet: Warning: command sudo mount -t nfs -o nfsvers=4.1,rsize=1048576,wsize=1048576,hard,timeo=600,retrans=2 fs-6b799421.efs.us-east-1.amazonaws.com:/ /ncluster returned status 32
+2018-10-11 14:42:05.953030 0.imagenet: tmux> df > /tmp/ncluster/0.imagenet-f85ds/75.stdout 2> /tmp/ncluster/0.imagenet-f85ds/75.stderr
+2018-10-11 14:42:05.953670 0.imagenet: uploading /tmp/ncluster/0.imagenet-f85ds/3529351164931 to /tmp/ncluster/0.imagenet-f85ds/75.cmd
+Waiting for file /tmp/ncluster/0.imagenet-f85ds/75.status
+2018-10-11 14:42:06.878481 0.imagenet: downloading /tmp/ncluster/0.imagenet-f85ds/75.status
+2018-10-11 14:42:07.148000 0.imagenet: downloading /tmp/ncluster/0.imagenet-f85ds/75.stdout
+2018-10-11 14:42:07.348990 0.imagenet: downloading /tmp/ncluster/0.imagenet-f85ds/75.stderr
+('EFS not yet mounted, sleeping 2 seconds',) {}
+2018-10-11 14:42:09.486123 0.imagenet: tmux> sudo mount -t nfs -o nfsvers=4.1,rsize=1048576,wsize=1048576,hard,timeo=600,retrans=2 fs-6b799421.efs.us-east-1.amazonaws.com:/ /ncluster
+2018-10-11 14:42:09.486930 0.imagenet: uploading /tmp/ncluster/0.imagenet-f85ds/3529354698081 to /tmp/ncluster/0.imagenet-f85ds/76.cmd
+Waiting for file /tmp/ncluster/0.imagenet-f85ds/76.status
+2018-10-11 14:42:10.414016 0.imagenet: downloading /tmp/ncluster/0.imagenet-f85ds/76.status
+2018-10-11 14:42:10.684257 0.imagenet: Warning: command sudo mount -t nfs -o nfsvers=4.1,rsize=1048576,wsize=1048576,hard,timeo=600,retrans=2 fs-6b799421.efs.us-east-1.amazonaws.com:/ /ncluster returned status 32
+2018-10-11 14:42:10.684400 0.imagenet: tmux> df > /tmp/ncluster/0.imagenet-f85ds/77.stdout 2> /tmp/ncluster/0.imagenet-f85ds/77.stderr
+2018-10-11 14:42:10.685138 0.imagenet: uploading /tmp/ncluster/0.imagenet-f85ds/3529355896295 to /tmp/ncluster/0.imagenet-f85ds/77.cmd
+Waiting for file /tmp/ncluster/0.imagenet-f85ds/77.status
+2018-10-11 14:42:11.605467 0.imagenet: downloading /tmp/ncluster/0.imagenet-f85ds/77.status
+2018-10-11 14:42:11.876186 0.imagenet: downloading /tmp/ncluster/0.imagenet-f85ds/77.stdout
+2018-10-11 14:42:12.077891 0.imagenet: downloading /tmp/ncluster/0.imagenet-f85ds/77.stderr
+('EFS not yet mounted, sleeping 2 seconds',) {}
+2018-10-11 14:42:14.212004 0.imagenet: tmux> sudo mount -t nfs -o nfsvers=4.1,rsize=1048576,wsize=1048576,hard,timeo=600,retrans=2 fs-6b799421.efs.us-east-1.amazonaws.com:/ /ncluster
+2018-10-11 14:42:14.212804 0.imagenet: uploading /tmp/ncluster/0.imagenet-f85ds/3529359423968 to /tmp/ncluster/0.imagenet-f85ds/78.cmd
+Waiting for file /tmp/ncluster/0.imagenet-f85ds/78.status
+2018-10-11 14:42:15.158043 0.imagenet: downloading /tmp/ncluster/0.imagenet-f85ds/78.status
+2018-10-11 14:42:15.428833 0.imagenet: Warning: command sudo mount -t nfs -o nfsvers=4.1,rsize=1048576,wsize=1048576,hard,timeo=600,retrans=2 fs-6b799421.efs.us-east-1.amazonaws.com:/ /ncluster returned status 32
+2018-10-11 14:42:15.428976 0.imagenet: tmux> df > /tmp/ncluster/0.imagenet-f85ds/79.stdout 2> /tmp/ncluster/0.imagenet-f85ds/79.stderr
+2018-10-11 14:42:15.429620 0.imagenet: uploading /tmp/ncluster/0.imagenet-f85ds/3529360640871 to /tmp/ncluster/0.imagenet-f85ds/79.cmd
+Waiting for file /tmp/ncluster/0.imagenet-f85ds/79.status
+2018-10-11 14:42:16.350301 0.imagenet: downloading /tmp/ncluster/0.imagenet-f85ds/79.status
+2018-10-11 14:42:16.619841 0.imagenet: downloading /tmp/ncluster/0.imagenet-f85ds/79.stdout
+2018-10-11 14:42:16.820943 0.imagenet: downloading /tmp/ncluster/0.imagenet-f85ds/79.stderr
+('EFS not yet mounted, sleeping 2 seconds',) {}
+2018-10-11 14:42:18.952697 0.imagenet: tmux> sudo mount -t nfs -o nfsvers=4.1,rsize=1048576,wsize=1048576,hard,timeo=600,retrans=2 fs-6b799421.efs.us-east-1.amazonaws.com:/ /ncluster
+2018-10-11 14:42:18.963458 0.imagenet: uploading /tmp/ncluster/0.imagenet-f85ds/3529364164655 to /tmp/ncluster/0.imagenet-f85ds/80.cmd
+Waiting for file /tmp/ncluster/0.imagenet-f85ds/80.status
+2018-10-11 14:42:22.454533 0.imagenet: downloading /tmp/ncluster/0.imagenet-f85ds/80.status
+2018-10-11 14:42:22.723507 0.imagenet: tmux> df > /tmp/ncluster/0.imagenet-f85ds/81.stdout 2> /tmp/ncluster/0.imagenet-f85ds/81.stderr
+2018-10-11 14:42:22.723926 0.imagenet: uploading /tmp/ncluster/0.imagenet-f85ds/3529367935429 to /tmp/ncluster/0.imagenet-f85ds/81.cmd
+Waiting for file /tmp/ncluster/0.imagenet-f85ds/81.status
+2018-10-11 14:42:23.641743 0.imagenet: downloading /tmp/ncluster/0.imagenet-f85ds/81.status
+2018-10-11 14:42:23.909585 0.imagenet: downloading /tmp/ncluster/0.imagenet-f85ds/81.stdout
+2018-10-11 14:42:24.108958 0.imagenet: downloading /tmp/ncluster/0.imagenet-f85ds/81.stderr
+2018-10-11 14:42:24.238153 0.imagenet: tmux> sudo chmod 777 /ncluster
+2018-10-11 14:42:24.238662 0.imagenet: uploading /tmp/ncluster/0.imagenet-f85ds/3529369450057 to /tmp/ncluster/0.imagenet-f85ds/82.cmd
+Waiting for file /tmp/ncluster/0.imagenet-f85ds/82.status
+2018-10-11 14:42:25.157744 0.imagenet: downloading /tmp/ncluster/0.imagenet-f85ds/82.status
+2018-10-11 14:42:25.426577 0.imagenet: uploading /tmp/ncluster/0.imagenet-f85ds/3529370637858 to install.sh
+2018-10-11 14:42:25.728815 0.imagenet: tmux> bash -e install.sh
+2018-10-11 14:42:25.729387 0.imagenet: uploading /tmp/ncluster/0.imagenet-f85ds/3529370940724 to /tmp/ncluster/0.imagenet-f85ds/83.cmd
+Waiting for file /tmp/ncluster/0.imagenet-f85ds/83.status
+2018-10-11 14:42:51.513623 0.imagenet: downloading /tmp/ncluster/0.imagenet-f85ds/83.status
+2018-10-11 14:42:51.779087 0.imagenet: Checking for initialization status
+2018-10-11 14:42:51.779156 0.imagenet: downloading is_initialized
+2018-10-11 14:42:52.179356 0.imagenet: Initialize complete
+2018-10-11 14:42:52.179400 0.imagenet: To connect to 0.imagenet
+ssh -i /Users/turkey/.ncluster/ncluster-turkey-318581613021-us-east-1.pem -o StrictHostKeyChecking=no ubuntu@18.207.250.206
+tmux a
+Exception are  []
+2018-10-11 14:42:52.182624 0.imagenet: uploading training to training
+2018-10-11 14:42:53.407148 0.imagenet: tmux> source activate pytorch_source
+2018-10-11 14:42:53.407872 0.imagenet: uploading /tmp/ncluster/0.imagenet-f85ds/3529398619094 to /tmp/ncluster/0.imagenet-f85ds/84.cmd
+Waiting for file /tmp/ncluster/0.imagenet-f85ds/84.status
+2018-10-11 14:42:54.509680 0.imagenet: downloading /tmp/ncluster/0.imagenet-f85ds/84.status
+2018-10-11 14:42:54.779909 0.imagenet: Creating logdir for run imagenet-1
+2018-10-11 14:42:54.780048 0.imagenet: tmux> mkdir -p /ncluster/runs
+2018-10-11 14:42:54.780838 0.imagenet: uploading /tmp/ncluster/0.imagenet-f85ds/3529399991943 to /tmp/ncluster/0.imagenet-f85ds/85.cmd
+Waiting for file /tmp/ncluster/0.imagenet-f85ds/85.status
+2018-10-11 14:42:55.702136 0.imagenet: downloading /tmp/ncluster/0.imagenet-f85ds/85.status
+2018-10-11 14:42:55.972645 0.imagenet: tmux> find /ncluster/runs -maxdepth 1 -type d > /tmp/ncluster/0.imagenet-f85ds/86.stdout 2> /tmp/ncluster/0.imagenet-f85ds/86.stderr
+2018-10-11 14:42:55.973347 0.imagenet: uploading /tmp/ncluster/0.imagenet-f85ds/3529401184588 to /tmp/ncluster/0.imagenet-f85ds/86.cmd
+Waiting for file /tmp/ncluster/0.imagenet-f85ds/86.status
+2018-10-11 14:42:56.893513 0.imagenet: downloading /tmp/ncluster/0.imagenet-f85ds/86.status
+2018-10-11 14:42:57.235751 0.imagenet: downloading /tmp/ncluster/0.imagenet-f85ds/86.stdout
+2018-10-11 14:42:57.437438 0.imagenet: downloading /tmp/ncluster/0.imagenet-f85ds/86.stderr
+2018-10-11 14:42:57.567421 0.imagenet: tmux> mkdir -p /ncluster/runs/imagenet-1
+2018-10-11 14:42:57.567953 0.imagenet: uploading /tmp/ncluster/0.imagenet-f85ds/3529402779363 to /tmp/ncluster/0.imagenet-f85ds/87.cmd
+Waiting for file /tmp/ncluster/0.imagenet-f85ds/87.status
+2018-10-11 14:42:58.489583 0.imagenet: downloading /tmp/ncluster/0.imagenet-f85ds/87.status
+2018-10-11 14:42:58.760549 0.imagenet: tmux> echo NCCL_DEBUG=VERSION python -m torch.distributed.launch --nproc_per_node=8 --nnodes=1 --node_rank=0 --master_addr=172.31.67.238 --master_port=6006 training/train_imagenet_nv.py ~/data/imagenet --fp16 --logdir /ncluster/runs/imagenet-1 --distributed --init-bn0 --no-bn-wd --phases "[{'ep': 0, 'sz': 128, 'bs': 512, 'trndir': '-sz/160'}, {'ep': (0, 7), 'lr': (1.0, 2.0)}, {'ep': (7, 13), 'lr': (2.0, 0.25)}, {'ep': 13, 'sz': 224, 'bs': 224, 'trndir': '-sz/352', 'min_scale': 0.087}, {'ep': (13, 22), 'lr': (0.4375, 0.043750000000000004)}, {'ep': (22, 25), 'lr': (0.043750000000000004, 0.004375)}, {'ep': 25, 'sz': 288, 'bs': 128, 'min_scale': 0.5, 'rect_val': True}, {'ep': (25, 28), 'lr': (0.0025, 0.00025)}]" > /ncluster/runs/imagenet-1/task-0.cmd
+2018-10-11 14:42:58.761214 0.imagenet: uploading /tmp/ncluster/0.imagenet-f85ds/3529403972498 to /tmp/ncluster/0.imagenet-f85ds/88.cmd
+Waiting for file /tmp/ncluster/0.imagenet-f85ds/88.status
+2018-10-11 14:42:59.685840 0.imagenet: downloading /tmp/ncluster/0.imagenet-f85ds/88.status
+2018-10-11 14:42:59.956720 0.imagenet: tmux> NCCL_DEBUG=VERSION python -m torch.distributed.launch --nproc_per_node=8 --nnodes=1 --node_rank=0 --master_addr=172.31.67.238 --master_port=6006 training/train_imagenet_nv.py ~/data/imagenet --fp16 --logdir /ncluster/runs/imagenet-1 --distributed --init-bn0 --no-bn-wd --phases "[{'ep': 0, 'sz': 128, 'bs': 512, 'trndir': '-sz/160'}, {'ep': (0, 7), 'lr': (1.0, 2.0)}, {'ep': (7, 13), 'lr': (2.0, 0.25)}, {'ep': 13, 'sz': 224, 'bs': 224, 'trndir': '-sz/352', 'min_scale': 0.087}, {'ep': (13, 22), 'lr': (0.4375, 0.043750000000000004)}, {'ep': (22, 25), 'lr': (0.043750000000000004, 0.004375)}, {'ep': 25, 'sz': 288, 'bs': 128, 'min_scale': 0.5, 'rect_val': True}, {'ep': (25, 28), 'lr': (0.0025, 0.00025)}]"
+2018-10-11 14:42:59.957434 0.imagenet: uploading /tmp/ncluster/0.imagenet-f85ds/3529405168669 to /tmp/ncluster/0.imagenet-f85ds/89.cmd
+Logging to /ncluster/runs/imagenet-1

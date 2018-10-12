@@ -1,0 +1,44 @@
+TurkeydeMacBook-Pro:imagenet18 turkey$ python train.py --machines=1
+2018-10-11 22:11:46.686270 0.imagenet: Using account 318581613021, region us-east-1, zone 
+('Resources already created, no-op',) {}
+('Choosing placement_group for run imagenet-1',) {}
+('Creating threads',) {}
+('Using account 318581613021, region us-east-1, zone ',) {}
+('Resources already created, no-op',) {}
+2018-10-11 22:11:48.896523 0.imagenet: Using image pytorch.imagenet.source.v7
+2018-10-11 22:11:52.298224 0.imagenet: Reusing ec2.Instance(id='i-09466a3b78ec20a62')
+ssh -i /Users/turkey/.ncluster/ncluster-turkey-318581613021-us-east-1.pem ubuntu@35.175.120.233
+2018-10-11 22:11:52.907254 0.imagenet: Setting up tmux
+2018-10-11 22:11:53.376047 0.imagenet: Checking for initialization status
+2018-10-11 22:11:53.376206 0.imagenet: downloading is_initialized
+2018-10-11 22:11:53.673182 0.imagenet: reusing previous initialized state
+2018-10-11 22:11:53.808584 0.imagenet: Initialize complete
+2018-10-11 22:11:53.808626 0.imagenet: To connect to 0.imagenet
+ssh -i /Users/turkey/.ncluster/ncluster-turkey-318581613021-us-east-1.pem -o StrictHostKeyChecking=no ubuntu@35.175.120.233
+tmux a
+Exception are  []
+2018-10-11 22:11:53.812371 0.imagenet: uploading training to training
+2018-10-11 22:11:54.785770 0.imagenet: tmux> source activate pytorch_source
+2018-10-11 22:11:54.786511 0.imagenet: uploading /tmp/ncluster/0.imagenet-v0ixt/3556339997719 to /tmp/ncluster/0.imagenet-v0ixt/1.cmd
+Waiting for file /tmp/ncluster/0.imagenet-v0ixt/1.status
+2018-10-11 22:11:55.680474 0.imagenet: downloading /tmp/ncluster/0.imagenet-v0ixt/1.status
+2018-10-11 22:11:55.897562 0.imagenet: Creating logdir for run imagenet-1
+2018-10-11 22:11:55.897643 0.imagenet: tmux> mkdir -p /ncluster/runs
+2018-10-11 22:11:55.898043 0.imagenet: uploading /tmp/ncluster/0.imagenet-v0ixt/3556341109510 to /tmp/ncluster/0.imagenet-v0ixt/2.cmd
+Waiting for file /tmp/ncluster/0.imagenet-v0ixt/2.status
+2018-10-11 22:11:56.660378 0.imagenet: downloading /tmp/ncluster/0.imagenet-v0ixt/2.status
+Traceback (most recent call last):
+  File "train.py", line 199, in <module>
+    main()
+  File "train.py", line 176, in main
+    '--logdir', job.logdir,
+  File "/Users/turkey/anaconda3/lib/python3.6/site-packages/ncluster/backend.py", line 200, in logdir
+    return self.tasks[0].logdir
+  File "/Users/turkey/anaconda3/lib/python3.6/site-packages/ncluster/aws_backend.py", line 541, in logdir
+    chief.setup_logdir()
+  File "/Users/turkey/anaconda3/lib/python3.6/site-packages/ncluster/aws_backend.py", line 556, in setup_logdir
+    self.run(f'mkdir -p {logdir_root}')
+  File "/Users/turkey/anaconda3/lib/python3.6/site-packages/ncluster/aws_backend.py", line 266, in run
+    raise RuntimeError(f"Command {cmd} returned status {status}")
+RuntimeError: Command mkdir -p /ncluster/runs returned status 1
+TurkeydeMacBook-Pro:imagenet18 turkey$ 
